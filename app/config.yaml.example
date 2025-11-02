@@ -76,6 +76,9 @@ FOFA:
 DINGDING:
   SECRET: ""
   ACCESS_TOKEN: ""
+  # DingTalk webhook URL for GitHub repository monitoring
+  # Format: https://oapi.dingtalk.com/robot/send?access_token=YOUR_ACCESS_TOKEN
+  WEBHOOK_URL: ""
 
 
 #飞书消息推送配置, 需要设置签名校验

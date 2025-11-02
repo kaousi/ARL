@@ -18,6 +18,8 @@ from .syncAsset import sync_asset
 from .npoc import run_risk_cruising, run_sniffer
 from .autoTag import auto_tag
 from .githubSearch import github_search
+from .github_repo_monitor import monitor_github_repo, format_events_for_dingtalk
+from .dingtalk_webhook import send_github_event_notification, send_dingtalk_notification
 from .infoHunter import run_wih
 from .baseUpdateTask import BaseUpdateTask
 from .domainSiteUpdate import domain_site_update

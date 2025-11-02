@@ -244,6 +244,7 @@ def asset_monitor_scheduler():
 
 def run_forever():
     from app.utils.github_task import github_task_scheduler
+    from app.utils.github_repo_task import github_repo_scheduler
     logger.info("start scheduler server ")
     while True:
         # 资产监控任务调度
@@ -251,6 +252,9 @@ def run_forever():
 
         # Github 监控任务调度
         github_task_scheduler()
+        
+        # Github 仓库监控任务调度
+        github_repo_scheduler()
 
         # 计划任务调度
         task_schedule.task_scheduler()

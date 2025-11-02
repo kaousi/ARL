@@ -169,6 +169,9 @@ class CeleryAction:
     """Github 泄漏监控任务"""
     GITHUB_TASK_MONITOR = "github_task_monitor"
 
+    """Github 仓库监控任务"""
+    GITHUB_REPO_MONITOR = "github_repo_monitor"
+
     """资产站点更新任务"""
     ASSET_SITE_UPDATE = "asset_site_update"
 

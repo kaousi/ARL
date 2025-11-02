@@ -61,6 +61,7 @@ def run_task(options):
         CeleryAction.FOFA_TASK: fofa_task,
         CeleryAction.GITHUB_TASK_TASK: github_task_task,
         CeleryAction.GITHUB_TASK_MONITOR: github_task_monitor,
+        CeleryAction.GITHUB_REPO_MONITOR: github_repo_monitor,
         CeleryAction.ASSET_SITE_UPDATE: asset_site_update,
         CeleryAction.ADD_ASSET_SITE_TASK: asset_site_add_task,
         CeleryAction.ASSET_WIH_UPDATE: asset_wih_update_task,
@@ -177,6 +178,15 @@ def github_task_monitor(options):
     keyword = options["keyword"]
     scheduler_id = options["github_scheduler_id"]
     wrap_tasks.github_task_monitor(task_id=task_id, keyword=keyword, scheduler_id=scheduler_id)
+
+
+def github_repo_monitor(options):
+    task_id = options["task_id"]
+    repo_owner = options["repo_owner"]
+    repo_name = options["repo_name"]
+    scheduler_id = options["github_repo_scheduler_id"]
+    wrap_tasks.github_repo_monitor_task(task_id=task_id, repo_owner=repo_owner, 
+                                        repo_name=repo_name, scheduler_id=scheduler_id)
 
 
 def asset_site_update(options):
