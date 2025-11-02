@@ -66,6 +66,7 @@ class Config(object):
 
     DINGDING_SECRET = ""
     DINGDING_ACCESS_TOKEN = ""
+    DINGTALK_WEBHOOK_URL = ""  # DingTalk webhook URL for GitHub monitoring
 
     FEISHU_WEBHOOK = ""
     FEISHU_SECRET = ""
@@ -164,6 +165,9 @@ try:
 
         if y["DINGDING"].get("ACCESS_TOKEN"):
             Config.DINGDING_ACCESS_TOKEN = y["DINGDING"]["ACCESS_TOKEN"]
+        
+        if y["DINGDING"].get("WEBHOOK_URL"):
+            Config.DINGTALK_WEBHOOK_URL = y["DINGDING"]["WEBHOOK_URL"]
 
     # *** 邮箱配置 ***
     if y.get("EMAIL"):

@@ -324,6 +324,7 @@ from .github_task import ns as github_task_ns
 from .github_result import ns as github_result_ns
 from .github_monitor_result import ns as github_monitor_result_ns
 from .github_scheduler import ns as github_scheduler_ns
+from .github_repo_scheduler import ns as github_repo_scheduler_ns
 from .task_schedule import ns as task_schedule_ns
 from .nuclei_result import ns as nuclei_result_ns
 from .wih import ns as wih_ns
